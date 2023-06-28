@@ -3,7 +3,7 @@ import './App.css';
 import styles from './style';
 import { About, Home} from './pages';
 const  App = () =>(
-  <div className="w-full overflow-hidden">
+  <div className="w-full overflow-hidden  ">
       <BrowserRouter>
    
       
