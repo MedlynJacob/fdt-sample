@@ -1,12 +1,12 @@
 import React from 'react';
 import back from '../images/SUN.JPG'
-import NavBar from '../components/navbar';
+
 
 const Contact = () => {
   return (
     <div className="bg-cover bg-center bg-black-300 h-screen bg-opacity-50 bg-blend-hard-light flex flex-col justify-between " style={{ backgroundImage: `url(${back})`}}>
     <div className="absolute inset-0 bg-black opacity-25"></div>
-    <NavBar/> 
+    
 
     <div className=' grid md:grid-cols-2 max-w-[1240px] m-auto flex-shrink:0 flex-col '>
       <div className="bg-white bg-opacity-20 backdrop-filter backdrop-blur-lg p-4 rounded-lg shadow-lg">
