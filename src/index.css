@@ -17,7 +17,21 @@
 * {
   scroll-behavior: smooth;
 }
-
+.s{
+  @apply
+  max-w-[175px]
+  ml-8
+  mr-8
+}
+.ps{
+  @apply
+  w-[70%] h-[75%]  bg-primary rounded-lg
+}
+.cont{
+  @apply
+  ml-4
+  font-semibold text-[20px] text-primary
+}
 .text-gradient {
   background: radial-gradient(
     64.18% 64.18% at 71.16% 35.69%,
