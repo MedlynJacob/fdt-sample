@@ -3,13 +3,13 @@ import './App.css';
 import styles from './style';
 import { About, Home} from './pages';
 const  App = () =>(
-  <div className="w-full overflow-hidden">
+  <div className="w-full overflow-hidden  ">
       <BrowserRouter>
    
       
    <Routes>
      <Route exact path='/about' element={<About />} />
-     <Route exact path='/home' element={<Home />} />
+     <Route exact path='/' element={<Home />} />
      
    </Routes>
 
