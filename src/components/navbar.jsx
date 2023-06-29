@@ -27,7 +27,7 @@ export default function Example() {
         className="p-2 font-bold"
         
       >
-        <a href="../Home" className="flex items-center hover-underline-animation">
+        <a href="../" className="flex items-center hover-underline-animation">
           Home
         </a>
       </Typography>
