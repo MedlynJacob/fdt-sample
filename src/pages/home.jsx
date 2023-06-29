@@ -16,10 +16,10 @@ const home = () => {
                         initial="hidden"
                         whileInView="show"
                         viewport={{ once: false, amount: 0.25 }}
-                        className={`   flex flex-col flex-wrap `}
+                        className={`    flex-col w-vw/2 `}
                     >
                         <TypingText title="Conservation tech,
-         reimagined" textStyles="text-black text-9xl  text-center font-bold" />
+         reimagined" textStyles="text-black text-5xl md:text-7xl lg:text-8xl xl:text-9xl  text-center font-bold break-words" />
                         <motion.div
                             variants={fadeIn('up','',2.8,1)}
                             duration={10}
