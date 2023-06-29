@@ -49,7 +49,7 @@ const home = () => {
                         <a href="/about">Learn more</a>
                     </button>
                 </div>
-                <img src={fdt1} alt="fdt logo" className="ml-9 w-[40%]"/>
+                <img src={fdt1} alt="fdt logo" className="ml-9 w-[40%] z-10"/>
             </div>
             <HomeImg/>
         </div>

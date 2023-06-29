@@ -14,7 +14,21 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
-
+.s{
+  @apply
+  max-w-[175px]
+  ml-8
+  mr-8
+}
+.ps{
+  @apply
+  w-[70%] h-[75%]  bg-primary rounded-lg
+}
+.cont{
+  @apply
+  ml-4
+  font-semibold text-[20px] text-primary
+}
 .white__gradient {
   background: rgba(255, 255, 255, 0.6);
   filter: blur(750px);
