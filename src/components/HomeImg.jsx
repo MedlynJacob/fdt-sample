@@ -7,7 +7,7 @@ import {   planetVariants } from '../utils/motion';
 import styles from '../styles';
 const HomeImg = () => {
   return (
-    <section className={`${styles.paddings} relative z-10 m-0 pl-40 pr-40 overflow-hidden`}>
+    <section className={`${styles.paddings} relative z-0 m-0 pl-40 pr-40 overflow-hidden `}>
       <div className="flex flex-col">
         <h1 className="text-center font-bold font-weight-800 text-[40px] p-9 mt-20 mb-15">
         Some of Our Applications in Action
@@ -62,7 +62,7 @@ const HomeImg = () => {
         variants={fadeIn('left')}
         className={` ${styles.start}  `}
       >
-        <div className="flex w-[570px] h-[427px]   p-0 m-0">
+        <div className="flex w-[570px] h-[427px]  p-0 m-0">
           <img className=" p-0 m-0 " src={bird2} alt="bird"/>
         </div>
       </motion.div>
