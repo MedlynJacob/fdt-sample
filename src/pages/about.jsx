@@ -1,5 +1,6 @@
-import React from 'react'
+import React, { useState } from 'react';
 //import './about.css';
+import '../styles/solutions.css';
 import '../index.css'
 import logo from '../assets/logo white.webp'
 import d from '../assets/dough.jpg'
@@ -14,22 +15,82 @@ import noaa from '../assets/noaa.jpg'
 import lar from '../assets/Larta-logo_edited.png.webp'
 import ucsb from '../assets/ucsb.jpg'
 import usdaa from '../assets/usda.webp'
+import hardwareImage from '../images/hardware.webp';
+import softwareImage from '../images/software.webp';
+import fieldImage from '../images/field.webp';
 
 
 
+const About = () => {
+  const [solutionsData, setSolutionsData] = useState([
+    {
+        id: 1,
+        title: 'Hardware Solution',
+        description:
+            'Doug Bonham brings thirty years of technical design experience from the Seattle technology corridor, holding positions at Microsoft, including electronic engineer, software engineer, and researcher, plus fifteen years of designing custom scientific instruments for field biologists.',
+        image: d,
+        flipped: false,
+    },
+    {
+        id: 2,
+        title: 'Software Solution',
+        description:
+            'Entrepreneurial Lead on an NSF I-Corps and a researcher on an NSF PFI:AIR-TT related to using computer vision to track birds, Connie utilizes her design and rapid prototyping skills to bring ideas to life. Posses a Ph.D. in Biomedical Sciences from the Texas A&M College of Veterinary Medicine and trained at the Fischer Engineering Design Center.',
+        image: c,
+        flipped: false,
+    },
+    {
+        id: 3,
+        title: 'Field Solution',
+        description:
+            'Field biologist and professor Chris has practical experience in evaluating the use of technology for imperiled species surveys for government vs. private wildlife management needs to meet the needs of both parties. With a Ph.D. from UC Santa Barbara in Evolution, Ecology, and Marine Biology, Chris has 13 publications related to species mapping and population management.',
+        image: ch,
+        flipped: false,
+    },
+]);
 
-const about = () => {
+const handleCardClick = (id) => {
+    setSolutionsData((prevState) =>
+        prevState.map((solution) =>
+            solution.id === id ? { ...solution, flipped: !solution.flipped } : { ...solution, flipped: false }
+        )
+    );
+};
+
   return (
-    <div className='bg-gray-100'>
+    <div className='bg-gray-100 flex flex-col'>
       <div className='bg-sky-400 h-[400px] rounded-[40px] '>
-        <img  src={logo} width={150} className=''></img>
-        <p className='p1 text-white' style={{textAlign:'center', font:'caption', fontSize:'50px'}}>GET  TO  KNOW  US</p>
+        {/* <img  src={logo} width={150} className=''></img> */}
+        <p className='p1 mt-20 pt-10 text-[50px] font-extrabold text-black' style={{textAlign:'center'}}>GET  TO  KNOW  US</p>
       </div>
-      <h3 className='mt-20 font-bold' style={{textAlign:'center', font:'caption', fontSize:'30px'}}>Meet the Founders</h3>
+      <h3 className='mt-20 text-[40px] font-bold' style={{textAlign:'center'}}>Meet the Founders</h3>
       <br /><br /><br />
 
-
-      <table align='center' className='bg-white'>
+    <div className='flex flex-col'>
+    <div className="solutions-container">
+            <h2 className="solutions-heading"></h2>
+            <div className="solutions-grid">
+                {solutionsData.map((solution) => (
+                    <div
+                        className={`solution-container ${solution.flipped ? 'flipped' : ''}`}
+                        key={solution.id}
+                        onClick={() => handleCardClick(solution.id)}
+                    >
+                        <div className="solution-card flex">
+                            <div className="solution-front flex">
+                                <img src={solution.image} alt={solution.title} className="solution-image w-full rounded-xl border-black " />
+                                <h3 className="solution-title">{solution.title}</h3>
+                            </div>
+                            <div className="solution-back">
+                                <p className="solution-description">{solution.description}</p>
+                            </div>
+                        </div>
+                    </div>
+                ))}
+            </div>
+        </div>
+    </div>
+      {/* <table align='center' className='bg-white'>
         <tr>
           <td>
             <img src={d} alt="" className='w-[319px] rounded-lg'/>
@@ -75,7 +136,7 @@ const about = () => {
             </p>
           </td>
         </tr>
-      </table>
+      </table> */}
 
 
       <br />
@@ -312,4 +373,4 @@ const about = () => {
   )
 }
 
-export default about
+export default About
