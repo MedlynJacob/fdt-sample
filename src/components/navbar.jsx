@@ -1,5 +1,6 @@
 import React from "react";
 import Logo1 from "../assets/FDT website watermark white.png"
+import { Navigate } from "react-router-dom";
 import {
   Navbar,
   MobileNav,
@@ -25,9 +26,8 @@ export default function Example() {
         color="blue-gray"
         stroke={2}
         className="p-2 font-bold"
-        
       >
-        <a href="../" className="flex items-center hover-underline-animation">
+        <a className="flex items-center hover-underline-animation" onClick={() => Navigate('/', { replace: true })}>
           Home
         </a>
       </Typography>
@@ -37,7 +37,7 @@ export default function Example() {
         color="blue-gray"
         className="p-2 font-bold"
       >
-        <a href="../Solutions" className="flex items-center hover-underline-animation">
+        <a className="flex items-center hover-underline-animation" onClick={() => Navigate('/solutions', { replace: true })}>
           Solutions
         </a>
       </Typography>
@@ -47,7 +47,7 @@ export default function Example() {
         color="blue-gray"
         className="p-2 font-bold"
       >
-        <a href="../Dashboard" className="flex items-center hover-underline-animation">
+        <a className="flex items-center hover-underline-animation" onClick={() => Navigate('/dashboard', { replace: true })}>
           Dashboard
         </a>
       </Typography>
@@ -57,7 +57,7 @@ export default function Example() {
         color="blue-gray"
         className="p-2 font-bold"
       >
-        <a href="../About" className="flex items-center hover-underline-animation">
+        <a className="flex items-center hover-underline-animation" onClick={() => Navigate('/about', { replace: true })}>
           About Us
         </a>
       </Typography>
@@ -67,12 +67,13 @@ export default function Example() {
         color="blue-gray"
         className="p-2 font-bold"
       >
-        <a href="../Contact" className="flex items-center hover-underline-animation">
+        <a className="flex items-center hover-underline-animation" onClick={() => Navigate('/contact', { replace: true })}>
           Contact Us
         </a>
       </Typography>
     </ul>
   );
+  
  
   return (
     <>
