@@ -16,10 +16,10 @@ const home = () => {
                         initial="hidden"
                         whileInView="show"
                         viewport={{ once: false, amount: 0.25 }}
-                        className={`   flex flex-col flex-wrap `}
+                        className={`    flex-col w-vw/2 `}
                     >
                         <TypingText title="Conservation tech,
-         reimagined" textStyles="text-black text-9xl z-10 text-center font-bold" />
+         reimagined" textStyles="text-black text-5xl md:text-7xl lg:text-8xl xl:text-9xl  text-center font-bold break-words" />
                         <motion.div
                             variants={fadeIn('up','',2.8,1)}
                             duration={10}
@@ -41,7 +41,7 @@ const home = () => {
             <button className="bg-sky-500 mt-5 mb-10 w-40 h-10 rounded-xl mx-auto hover:bg-black text-white text-20">
                 <a href="/about">Learn more</a>
             </button>
-            <div className="flex flex-row w-full pl-40 pr-40 mt-10">
+            <div className="flex flex-row w-full pl-40 pr-40 mt-10 ">
                 <div className="w-[50%]">
                     <h1 className="text-black p-1 mb-5 text-4xl text-left font-bold">ABOUT US</h1>
                     <p className=" text-gray-500 text-normal text-[18px]">Field Data Technologies and Field Data Services are sister companies empowering environmental stakeholders to make management decisions through actionable, real-time data. We are funded by USDA, NOAA, and the State of Montana to build a new type of smart trail camera. </p>
@@ -49,7 +49,7 @@ const home = () => {
                         <a href="/about">Learn more</a>
                     </button>
                 </div>
-                <img src={fdt1} alt="fdt logo" className="ml-9 w-[40%]"/>
+                <img src={fdt1} alt="fdt logo" className="ml-9 w-[40%] "/>
             </div>
             <HomeImg/>
         </div>
