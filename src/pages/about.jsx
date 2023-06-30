@@ -2,7 +2,6 @@ import React, { useState } from 'react';
 //import './about.css';
 import '../styles/solutions.css';
 import '../index.css'
-import logo from '../assets/logo white.webp'
 import d from '../assets/dough.jpg'
 import c from '../assets/connie.jpg'
 import ch from '../assets/chris.jpg'
@@ -15,9 +14,7 @@ import noaa from '../assets/noaa.jpg'
 import lar from '../assets/Larta-logo_edited.png.webp'
 import ucsb from '../assets/ucsb.jpg'
 import usdaa from '../assets/usda.webp'
-import hardwareImage from '../images/hardware.webp';
-import softwareImage from '../images/software.webp';
-import fieldImage from '../images/field.webp';
+
 
 
 
@@ -25,7 +22,7 @@ const About = () => {
   const [solutionsData, setSolutionsData] = useState([
     {
         id: 1,
-        title: 'Hardware Solution',
+        title: 'Douglas Bonham',
         description:
             'Doug Bonham brings thirty years of technical design experience from the Seattle technology corridor, holding positions at Microsoft, including electronic engineer, software engineer, and researcher, plus fifteen years of designing custom scientific instruments for field biologists.',
         image: d,
@@ -33,7 +30,7 @@ const About = () => {
     },
     {
         id: 2,
-        title: 'Software Solution',
+        title: 'Constance Woodman',
         description:
             'Entrepreneurial Lead on an NSF I-Corps and a researcher on an NSF PFI:AIR-TT related to using computer vision to track birds, Connie utilizes her design and rapid prototyping skills to bring ideas to life. Posses a Ph.D. in Biomedical Sciences from the Texas A&M College of Veterinary Medicine and trained at the Fischer Engineering Design Center.',
         image: c,
@@ -41,7 +38,7 @@ const About = () => {
     },
     {
         id: 3,
-        title: 'Field Solution',
+        title: 'Christopher Evelyn',
         description:
             'Field biologist and professor Chris has practical experience in evaluating the use of technology for imperiled species surveys for government vs. private wildlife management needs to meet the needs of both parties. With a Ph.D. from UC Santa Barbara in Evolution, Ecology, and Marine Biology, Chris has 13 publications related to species mapping and population management.',
         image: ch,
@@ -68,7 +65,6 @@ const handleCardClick = (id) => {
 
     <div className='flex flex-col'>
     <div className="solutions-container">
-            <h2 className="solutions-heading"></h2>
             <div className="solutions-grid">
                 {solutionsData.map((solution) => (
                     <div
@@ -90,55 +86,6 @@ const handleCardClick = (id) => {
             </div>
         </div>
     </div>
-      {/* <table align='center' className='bg-white'>
-        <tr>
-          <td>
-            <img src={d} alt="" className='w-[319px] rounded-lg'/>
-            <figcaption align='center' className='pl-[80px]'>
-              Douglas Bonham
-            </figcaption>
-          </td>
-          <td width="500px">
-           <p className='cont'>
-              Doug Bonham brings thirty years of technical design experience from the Seattle technology corridor, holding positions at Microsoft, including electronic engineer, software engineer, and researcher, plus fifteen years of designing custom scientific instruments for field biologists.
-           </p>
-         </td>
-        </tr>
-        <br />
-        <hr />
-        <br />
-        <tr>
-          <td>
-            <img src={c} alt="" className='w-[319px] rounded-lg'/>
-            <figcaption align='center' className='pl-[80px]'>
-              Constance Woodman
-            </figcaption>
-          </td>
-          <td>
-            <p className='cont'>
-            Entrepreneurial Lead on an NSF I-Corps and a researcher on an NSF PFI:AIR-TT related to using computer vision to track birds, Connie utilizes her design and rapid prototyping skills to bring ideas to life. Posses a Ph.D. in Biomedical Sciences from the Texas A&M College of Veterinary Medicine and trained at the Fischer Engineering Design Center.
-            </p>
-          </td>
-        </tr>
-        <br />
-        <hr />
-        <br />
-        <tr>
-          <td>
-            <img src={ch} alt="" className='w-[319px] rounded-lg'/>
-            <figcaption align='center'className='pl-[80px]'>
-              Christopher Evelyn
-            </figcaption>
-          </td>
-          <td>
-            <p className='cont'>
-            Field biologist and professor Chris has practical experience in evaluating the use of technology for imperiled species surveys for government vs. private wildlife management needs to meet the needs of both parties. With a Ph.D. from UC Santa Barbara in Evolution, Ecology, and Marine Biology, Chris has 13 publications related to species mapping and population management.
-            </p>
-          </td>
-        </tr>
-      </table> */}
-
-
       <br />
 
 
