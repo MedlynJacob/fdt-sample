@@ -1,6 +1,5 @@
 import React from "react";
 import Logo1 from "../assets/FDT website watermark white.png"
-import { Navigate } from "react-router-dom";
 import {
   Navbar,
   MobileNav,
@@ -26,8 +25,9 @@ export default function Example() {
         color="blue-gray"
         stroke={2}
         className="p-2 font-bold"
+        
       >
-        <a className="flex items-center hover-underline-animation" onClick={() => Navigate('/', { replace: true })}>
+        <a href="../" className="flex items-center hover-underline-animation">
           Home
         </a>
       </Typography>
@@ -37,7 +37,7 @@ export default function Example() {
         color="blue-gray"
         className="p-2 font-bold"
       >
-        <a className="flex items-center hover-underline-animation" onClick={() => Navigate('/solutions', { replace: true })}>
+        <a href="../Solutions" className="flex items-center hover-underline-animation">
           Solutions
         </a>
       </Typography>
@@ -47,7 +47,7 @@ export default function Example() {
         color="blue-gray"
         className="p-2 font-bold"
       >
-        <a className="flex items-center hover-underline-animation" onClick={() => Navigate('/dashboard', { replace: true })}>
+        <a href="../Dashboard" className="flex items-center hover-underline-animation">
           Dashboard
         </a>
       </Typography>
@@ -57,7 +57,7 @@ export default function Example() {
         color="blue-gray"
         className="p-2 font-bold"
       >
-        <a className="flex items-center hover-underline-animation" onClick={() => Navigate('/about', { replace: true })}>
+        <a href="../About" className="flex items-center hover-underline-animation">
           About Us
         </a>
       </Typography>
@@ -67,13 +67,12 @@ export default function Example() {
         color="blue-gray"
         className="p-2 font-bold"
       >
-        <a className="flex items-center hover-underline-animation" onClick={() => Navigate('/contact', { replace: true })}>
+        <a href="../Contact" className="flex items-center hover-underline-animation">
           Contact Us
         </a>
       </Typography>
     </ul>
   );
-  
  
   return (
     <>
