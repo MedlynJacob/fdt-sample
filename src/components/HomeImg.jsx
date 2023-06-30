@@ -1,9 +1,8 @@
 import React from 'react'
 import { bird1, bird2, liz } from "../images";
-import { TypingText , TitleText } from '../components/CustomTexts';
+import { TitleText } from '../components/CustomTexts';
 import { motion } from 'framer-motion';
 import { fadeIn, staggerContainer } from '../utils/motion';
-import {   planetVariants } from '../utils/motion';
 import styles from '../styles';
 const HomeImg = () => {
   return (
